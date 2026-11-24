@@ -12,4 +12,4 @@ jobs:
       - name: Validate JSON, routing and no credentials
         run: python3 scripts/validate-config.py
       - name: Check shell syntax
-        run: bash -n scripts/start-tunnel.sh scripts/check-socks.sh
+        run: bash -n scripts/start-tunnel.sh scripts/check-socks.sh scripts/android-bootstrap.sh
