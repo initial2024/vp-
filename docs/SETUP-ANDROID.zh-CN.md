@@ -23,6 +23,16 @@ cd vp-
 
 `git clone` 复制的是**开源教程、脚本、配置文件**，不会复制云主机、密钥、VPN 凭证或任何节点账户。
 
+**重要：Termux 克隆后需要把 JSON 复制到 Android 公共下载目录。** Termux 的 `~/vp-` 在应用私有目录，v2RayTun 的「从本地导入」文件选择器通常无法直接访问。首次执行下面命令并允许文件权限：
+
+```sh
+termux-setup-storage
+mkdir -p ~/storage/downloads/vp-
+cp ~/vp-/configs/AL-SSH-TCP-DNS-fixed.json ~/storage/downloads/vp-/
+```
+
+然后在 v2RayTun 中从 **Download / vp- / AL-SSH-TCP-DNS-fixed.json** 导入。若 Termux 未取得存储权限，可直接用手机浏览器下载仓库 JSON 到 Download。
+
 ## B. 先建立本地 SOCKS5（二选一）
 
 ### B1. Termius 图形界面（已实际使用过的路径）
