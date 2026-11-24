@@ -4,6 +4,8 @@
 
 **目标**：朋友使用**自己的** SSH 云主机，通过 SSH 动态转发在 Android 建立 `127.0.0.1:1080` SOCKS5，然后用 v2RayTun 接管选定应用的 TCP 流量。此方案不要求朋友共享原用户的机器或账户。
 
+**Altare 平台的朋友请优先阅读 [Altare 专用逐步教程（含完整代码）](ALTARE-ANDROID-COPY-PASTE.zh-CN.md)。**
+
 ## A. 下载/克隆仓库
 
 **手机不熟悉命令行：**
