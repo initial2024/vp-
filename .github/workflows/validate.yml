@@ -1,0 +1,15 @@
+name: Validate reproducible SSH SOCKS setup
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  offline-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate JSON, routing and no credentials
+        run: python3 scripts/validate-config.py
+      - name: Check shell syntax
+        run: bash -n scripts/start-tunnel.sh scripts/check-socks.sh

@@ -1,0 +1,12 @@
+# Never commit personal connection credentials
+.env
+.env.*
+*.pem
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+*.key
+*.log
+*.session
+__pycache__/
