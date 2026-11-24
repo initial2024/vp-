@@ -20,6 +20,10 @@ Termius（动态端口转发）或 Termux OpenSSH (-D)
 
 **协议边界**：OpenSSH `-D` 是 SOCKS 动态 **TCP** 转发，不是完整 UDP VPN；本配置把 DNS 53 请求送往 Xray DNS 出站，使用 Cloudflare 的 DoH 上游；其余 UDP 一律阻断。视频、游戏、语音、QUIC/HTTP3 可能退回 TCP 或失败，不能声称「所有应用都能用」。
 
+## Altare 专用：复制命令、逐步安装（优先看这里）
+
+如果你使用的是 **console.altare.gg / Apps / Sandboxes**，优先看 **[Altare 从申请到使用的完整教程（含所有可执行命令）](docs/ALTARE-ANDROID-COPY-PASTE.zh-CN.md)**。其中明确指出每组命令在 **Altare Web Console / 手机 Termux / v2RayTun** 的哪个位置运行，朋友无需使用你的 SSH 地址和密钥。
+
 ## 快速开始（建议严格按顺序）
 
 1. [申请/准备自己的 Linux SSH 云主机](docs/SERVER-SSH.zh-CN.md)。确认提供商允许 SSH 和对外 TCP 连接，拿到 **SSH 主机名、端口、用户名、认证方式**。**不要复制别人的主机地址或私钥**。
